@@ -26,13 +26,13 @@ else:
 age = int(input("What is your age?"))
 
 if (age < 13):
-   print("You can only watch PG/G movies")
+  print("You can only watch PG/G movies")
 elif (17 > age >= 13):
   print("You can only watch PG/13/PG/G movies")
 else:
   print("You can watch all movies")
      
-is_Hungry = True
+is_Hungry = False
 is_Sleepy = False
 if (is_Hungry == True):
   print("You should go eat")
@@ -40,4 +40,13 @@ if (is_Sleepy == True):
   print("You should go sleep")
 if (is_Sleepy == False):
   print("You are well rested")
+
+# Asks the user for a number
+# Tells the user if the number is even or odd
+
+question = int(input("Choose a number : "))
+if (question % 2 != 0):
+   print("This number is odd")
+else:
+   print("The number is even")
 
