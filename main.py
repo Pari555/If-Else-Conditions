@@ -45,8 +45,33 @@ if (is_Sleepy == False):
 # Tells the user if the number is even or odd
 
 question = int(input("Choose a number : "))
+
 if (question % 2 != 0):
    print("This number is odd")
 else:
    print("The number is even")
 
+# Math Quandants
+# Ask the user for a x and y value
+# Using a nested conditional, output which quadrant they are in
+
+x = int(input("Choose a value for x :"))
+y = int(input("Choose a value for y :"))
+
+if ( x > 0 ):
+  if ( y > 0 ):
+    print("You're number is in the first quadrant")
+  else:
+    print("You're number is in the fourth quadrant")
+elif (x < 0 ):
+   if ( y > 0 ):
+    print("You're number is in the third quadrant")
+   if ( y > 0 ):
+    print("You're number is in the second quadrant")
+
+# if x and y are 0, output the origin 
+if(x == 0 and y == 0):
+    print("You are on the origin")
+
+# and, or 
+# and takes precedence over or
