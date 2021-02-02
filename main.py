@@ -32,14 +32,27 @@ elif (17 > age >= 13):
 else:
   print("You can watch all movies")
      
-is_Hungry = False
+is_Hungry = True
 is_Sleepy = False
+is_Bored  = True
 if (is_Hungry == True):
   print("You should go eat")
 if (is_Sleepy == True):
   print("You should go sleep")
 if (is_Sleepy == False):
   print("You are well rested")
+
+
+if (is_Hungry == is_Bored or is_Sleepy == is_Hungry):
+  print("You should do your homework")
+else:
+  print("You can play outside.")
+
+if (is_Sleepy == is_Hungry and is_Hungry == is_Bored):
+   if(is_Sleepy == is_Bored):
+     print("it's nap time")
+else:
+   print("it's time for bed")
 
 # Asks the user for a number
 # Tells the user if the number is even or odd
@@ -63,11 +76,28 @@ if ( x > 0 ):
     print("You're number is in the first quadrant")
   else:
     print("You're number is in the fourth quadrant")
-elif (x < 0 ):
-   if ( y > 0 ):
+elif (x < 0):
+  if ( y < 0 ):
     print("You're number is in the third quadrant")
-   if ( y > 0 ):
+  if ( y > 0 ):
     print("You're number is in the second quadrant")
+
+# create an if statement using 'and' or 'or' for the third and second quadrant
+if( x < 0 and y > 0 ):
+  print("You're number is in the second quadrant")
+elif ( x < 0 and y < 0 ):
+  print("You're number is in the third quadrant")
+
+# let the user know if they are on the x-axis or y-axis
+# if we have +y or -y but x == 0
+# "You are on the y-axis"
+# if we have +x or -x but y == 0
+# "You are on the x-axis"
+
+if( x == 0 and y != 0 ):
+  print("You are on the y-axis")
+if( y == 0 and x != 0 ):
+  print("You are on the x-axis")
 
 # if x and y are 0, output the origin 
 if(x == 0 and y == 0):
@@ -75,3 +105,18 @@ if(x == 0 and y == 0):
 
 # and, or 
 # and takes precedence over or
+# 'and' both conditions have to be correct
+# 'or' only one condition has to be correct
+
+x = 5
+y = 6
+z = 7
+if( x == 5 and y == 5 or z == 5 ):
+  print("Yay")
+else:
+  print("Nay")
+
+if( x == 5 or y == 5 and z == 5):
+  print("Yay")
+else:
+  print("Nay")
